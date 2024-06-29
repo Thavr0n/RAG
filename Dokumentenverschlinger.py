@@ -14,6 +14,8 @@ local_path = "/home/ssaman/RAG/RAG/Dokumente"
 
 ## Loop, der durch das Verzeichnis guckt, und bei der Endung .pdf aktiv wird
 for filename in os.listdir(local_path):
+
+    ## nicht verwechseln: file_path und filepath! >.<
     filepath = os.path.join(local_path, filename)
     if filename.endswith(".pdf"): 
         print(f"Processing {filename}...")
