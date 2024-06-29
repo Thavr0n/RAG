@@ -26,16 +26,16 @@ Und anschließend folgende benötigte Bibliotheken installieren:
 ```pip install "unstructured[all-docs]"```
 
 
---- 
+
 ```pip install chromadb```
 ```pip install langchain-text-splitters```
 
-
+--- 
 ##### unsicher ob benötigt:
 ```pip install psutil```
 
 ```sudo apt-get install poppler-utils```
-
+--- 
 
 
 Abschließend erst mit 
@@ -43,5 +43,5 @@ Abschließend erst mit
 die ganze Datenbank auslesen, indexieren und speichern. 
 
 Dann mit
-```python3.11 Dokumentenauskotzer.py ```
+```python3.11 FragMich.py ```
 die Datenbank laden und das System antwortet nur basierend auf der Datengrundlage.
