@@ -162,7 +162,7 @@ cython_debug/
 #.idea/
 
 folder_to_ignore/RAG/RAG/Dokumente/
-folder_to_ignore/RAG/RAG/Datenbank/
+folder_to_ignore/RAG/RAG/Datenbank
 Dokumente/Counter-frame - Einleitung.pdf
 Dokumente/Counter-frame - Feminismus.pdf
 Dokumente/Counter-frame - Industrie und Wettbewerbsfähigkeit.pdf
