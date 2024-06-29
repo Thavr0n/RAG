@@ -2,8 +2,11 @@
 Damit das ganze funktioniert, muss erst ollama mit llama3 für die antworten und nomic-embed-text fürs embedding installiert werden. Das geht am via:
 
 ```sudo apt update```
+
 ```curl -fsSL https://ollama.com/install.sh | sh```
+
 ```ollama pull llama3```
+
 ```ollama pull nomic-embed-text```
 
 
