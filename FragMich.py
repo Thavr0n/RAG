@@ -41,7 +41,8 @@ QUERY_PROMPT = PromptTemplate(
 )
 
 ## der retriever erlaubt einen String Input, was unser query samt des templates ist 
-# und gibt ein Dokument als Output zurück, weshalb wir auf die in Dokumentenverschlinger.py angelegte Chroma Datenbank zugreifen
+# und gibt ein Dokument als Output zurück, weshalb wir auf die in Dokumentenverschlinger.py
+# angelegte Chroma Datenbank zugreifen
 print("Erstelle Retriever...")
 try:
     retriever = MultiQueryRetriever.from_llm(
