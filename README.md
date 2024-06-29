@@ -14,12 +14,15 @@ Anschließend virtuelle python3.11 Umgebung (3.12 funktioniert nicht mit allem)
 ```python3.11 -m venv venv```
 
 im entsprechenden Verzeichnis aktivieren via
+
 ```source venv/bin/activate```
 
 Und anschließend folgende benötigte Bibliotheken installieren:
 
 ```pip3 install langchain_community```
+
 ```pip install unstructured langchain```
+
 ```pip install "unstructured[all-docs]"```
 
 
@@ -28,11 +31,11 @@ Und anschließend folgende benötigte Bibliotheken installieren:
 ```pip install langchain-text-splitters```
 
 
-## unsicher ob benötigt:
-pip install psutil
+##### unsicher ob benötigt:
+```pip install psutil```
 
-sudo apt-get install poppler-utils
-##
+```sudo apt-get install poppler-utils```
+
 
 
 Abschließend erst mit 
