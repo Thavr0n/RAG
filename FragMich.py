@@ -56,7 +56,7 @@ print("Retriever erfolgreich erstellt!")
 
 ## Dieser Befehl sagt unserem System, dass es die Frage bzw. das query NUR basierend auf den fünf besten Ergebnissen 
 # unseres retrievers beantworten soll. 
-template = """ Answer the question in german based ONLY on the following context:{context}
+template = """ Explain your answer in german based ONLY on the following context:{context}
     Question: {question}"""
 
 
