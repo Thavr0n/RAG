@@ -17,7 +17,7 @@ for filename in os.listdir(local_path):
 
     ## nicht verwechseln: file_path und filepath! >.<
     filepath = os.path.join(local_path, filename)
-    if filename.endswith(".pdf"): 
+    if filename.endswith(".pdf"): ##müsste perspektivisch mit anderen dateitypen gemacht werden - dann eher als funktion?
         print(f"Processing {filename}...")
 
         ## der UnstructuredPDFLoader nimmt die jeweilige Datei und zerlegt sie unten weiter
