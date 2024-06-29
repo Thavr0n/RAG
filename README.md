@@ -12,3 +12,5 @@ pip install chromadb
 pip install langchain-text-splitters
 
 pip install psutil
+
+sudo apt-get install poppler-utils
