@@ -29,7 +29,7 @@ for filename in os.listdir(local_path):
 
         ## initialisiert den TextSplitter | ChunkSize = Zusammenhängend erfasste Zeichen 
         ## Overlap = Liest auch entsprechend vor und zurück um Kontext besser zu erfassen
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=40, chunk_overlap=8)
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=300, chunk_overlap=10)
 
         ## zerteilt das vom PDFLoader geladene Dokument in Chunks anhand der vom 
         #  textsplitter vorgegebenen Parameter
