@@ -10,3 +10,5 @@ pip install "unstructured[all-docs]"
 --- 
 pip install chromadb
 pip install langchain-text-splitters
+
+pip install psutil
