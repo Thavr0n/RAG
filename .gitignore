@@ -163,3 +163,5 @@ cython_debug/
 
 folder_to_ignore/RAG/RAG/Dokumente
 folder_to_ignore/RAG/RAG/Datenbank
+dir_to_ignore/RAG/RAG/Datenbank
+dir_to_ignore/RAG/RAG/Dokumente
