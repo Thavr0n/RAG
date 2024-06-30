@@ -161,7 +161,9 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-folder_to_ignore/RAG/RAG/Dokumente/
-folder_to_ignore/RAG/RAG/Datenbank/
-dir_to_ignore/RAG/RAG/Datenbank/
-dir_to_ignore/RAG/RAG/Dokumente/
+folder_to_ignore/Dokumente
+folder_to_ignore/Datenbank
+dir_to_ignore/Datenbank
+dir_to_ignore/Dokumente
+Dokumente/Counter-frame - Einleitung.pdf
+Dokumente/Counter-frame - Feminismus.pdf
