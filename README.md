@@ -1,5 +1,5 @@
 # RAG
-Damit das ganze funktioniert, muss erst ollama mit llama3 für die antworten und nomic-embed-text fürs embedding installiert werden. Das geht am via:
+Damit das ganze funktioniert, muss erst ollama mit llama3 für die antworten und nomic-embed-text fürs embedding installiert werden. Das geht via:
 
 ```sudo apt update```
 
@@ -17,19 +17,15 @@ im entsprechenden Verzeichnis aktivieren via
 
 ```source venv/bin/activate```
 
-Und anschließend folgende benötigte Bibliotheken installieren:
+Und daraufhin folgende benötigte Bibliotheken installieren:
 
 ```pip3 install langchain_community```
 
 ```pip install unstructured langchain```
 
 ```pip install "unstructured[all-docs]"```
-
-
-
 ```pip install chromadb```
 ```pip install langchain-text-splitters```
-
 
 
 Abschließend erst mit 
@@ -42,7 +38,7 @@ die Datenbank laden und das System antwortet nur basierend auf der Datengrundlag
 
 
 
-## Zum installieren eines Deutschen Sprachmodells für bessere Ergebnisse 
+## Installieren eines Deutschen Sprachmodells für bessere Ergebnisse 
 
 Diese Schritte sind nur notwendig, wenn das gewünschte Sprachmodell noch nicht in
 der ollama library verfügbar ist und nur als safetensor bzw. gguf modell existiert:
@@ -53,8 +49,10 @@ Architekturen beruht (vgl. https://github.com/ollama/ollama/blob/main/docs/impor
 - GemmaForCausalLM 
 
 Ob das so ist kann in der Repo des Modells unter config.json eingesehen werden. 
+
+Nachdem die obigen Voraussetzungen überprüft sind:
 1. git lfs installieren, um große Daten laden zu können (falls noch nicht geschehen)
-2. git clone https://huggingface.co/DiscoResearch/Llama3-DiscoLeo-Instruct-8B-v0.1
+2. ```git clone https://huggingface.co/DiscoResearch/Llama3-DiscoLeo-Instruct-8B-v0.1```
 
 4. Eine neue Modelfile erstellen, die als Quelle den eben heruntergeladenen Ordner angibt:
 ``` ## Modelfile ``` 
