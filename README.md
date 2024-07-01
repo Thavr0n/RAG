@@ -9,7 +9,7 @@ Anschließend wird die Datenbank von FragMich.py geladen und beantwortet einen U
 
 Der Code ist ausführlichst auskommentiert, da er mir selbst beim Erlernen und Verstehen des Systems helfen soll. Anderen ebf. unerfahrenen Programmierenden kann er evtl. dabei helfen das Framework schneller zu erfassen.
 
---
+
 ## Erste Schritte bei der eigenen Umsetzung:
 #### Installieren von Ollama ("Docker für LLMs")
 Damit das ganze funktioniert, muss erst ollama mit llama3 für die antworten und nomic-embed-text fürs embedding installiert werden. Das geht via:
@@ -38,7 +38,9 @@ Und daraufhin folgende benötigte Bibliotheken installieren:
 ```pip install unstructured langchain```
 
 ```pip install "unstructured[all-docs]"```
+
 ```pip install chromadb```
+
 ```pip install langchain-text-splitters```
 
 #### Erstellung der Datenbank und Query an die Datenbank
@@ -51,7 +53,7 @@ Dann mit
 die Datenbank laden und das System antwortet nur basierend auf der Datengrundlage.
 
 
---
+
 ## Installieren eines Deutschen Sprachmodells für bessere Ergebnisse 
 
 Diese Schritte sind nur notwendig, wenn das gewünschte Sprachmodell noch nicht in
