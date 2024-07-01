@@ -7,7 +7,7 @@ Anschließend wird die Datenbank von FragMich.py geladen und beantwortet einen U
 
 ``` python3.11 FragMich.py ``` 
 
-Der Code ist ausführlichst auskommentiert, da er mir selbst beim Erlernen und Verstehen des Systems helfen soll. Anderen ebf. unerfahrenen Programmierenden kann er evtl. dabei helfen das Framework schneller zu erfassen.
+Der Code ist ausführlichst auskommentiert, da er mir selbst beim Erlernen und Verstehen des Systems half. Anderen ebf. unerfahrenen Programmierenden kann er evtl. dabei helfen das Framework schneller zu erfassen.
 
 
 ## Erste Schritte bei der eigenen Umsetzung:
@@ -56,10 +56,8 @@ die Datenbank laden und das System antwortet nur basierend auf der Datengrundlag
 
 ## Installieren eines Deutschen Sprachmodells für bessere Ergebnisse 
 
-Diese Schritte sind nur notwendig, wenn das gewünschte Sprachmodell noch nicht in
-der ollama library verfügbar ist und nur als safetensor bzw. gguf modell existiert:
-Ebenfalls sind sie nur möglich, wenn das basierende Sprachmodell auf einer dieser drei
-Architekturen beruht (vgl. https://github.com/ollama/ollama/blob/main/docs/import.md#importing-pytorch--safetensors )
+Diese Schritte sind nur notwendig, wenn das gewünschte Sprachmodell noch nicht in der ollama library verfügbar ist und nur als safetensor bzw. gguf modell existiert:
+Ebenfalls sind sie nur möglich, wenn das basierende Sprachmodell auf einer dieser drei Architekturen beruht (vgl. https://github.com/ollama/ollama/blob/main/docs/import.md#importing-pytorch--safetensors )
 - LlamaForCausalLM
 - MistralForCausalLM
 - GemmaForCausalLM 
@@ -72,19 +70,31 @@ Nachdem die obigen Voraussetzungen überprüft sind:
 
 4. Eine neue Modelfile erstellen, die als Quelle den eben heruntergeladenen Ordner angibt:
 ``` ## Modelfile ``` 
+
 ``` FROM /home/ssaman/Llama3-DiscoLeo-Instruct-8B-v0.1"```
+
  ``` PARAMETER stop "<|im_start|>"``` 
+
 ``` PARAMETER stop "<|im_end|>"``` 
+
 ``` TEMPLATE """``` 
+
 ``` <|im_start|>system``` 
+
 ``` {{ .System }}<|im_end|>``` 
+
 ``` <|im_start|>user``` 
+
 ``` {{ .Prompt }}<|im_end|>``` 
+
 ``` <|im_start|>assistant``` 
+
 ``` """``` 
 
-5. Den Ordnerpfad in dem Safetensors/GGUF und Daten und Modelfile liegen öffnen und mit Ollama eine neue LLM daraus erstellen via:
+
+5. Den Ordnerpfad in dem Safetensors/GGUF-Daten und Modelfile liegen öffnen und mit Ollama eine neue LLM daraus erstellen via:
 ```ollama create -q Q4_K_M GermanLlama3```
+Achtung dieser Schritt erfordert viel freien Speicherplatz (Bei mir bis zu 60GB | Das fertiggestellte Model hat dann allerdings nur 4,9GB)
 Weitere Quantisierungsmethoden ("Q4_K_M") hier: https://github.com/ollama/ollama/blob/main/docs/import.md#importing-pytorch--safetensors 
 
 
