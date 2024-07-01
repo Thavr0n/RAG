@@ -75,6 +75,6 @@ Ob das so ist kann in der Repo des Modells unter config.json eingesehen werden.
 ``` <|im_start|>assistant``` 
 ``` """``` 
 
-5. Innerhalb von Ollama eine neue LLM daraus erstellen via 
-```ollama create -q Q4_K_M mymodel```
+5. Den Ordnerpfad in dem Safetensors/GGUF und Daten und Modelfile liegen öffnen und mit Ollama eine neue LLM daraus erstellen via:
+```ollama create -q Q4_K_M GermanLlama3```
 Weitere Quantisierungsmethoden ("Q4_K_M") hier: https://github.com/ollama/ollama/blob/main/docs/import.md#importing-pytorch--safetensors 
