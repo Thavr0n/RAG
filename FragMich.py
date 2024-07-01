@@ -67,7 +67,7 @@ print("Retriever erfolgreich erstellt!")
 # falls kein dt. LLM installiert ist (s. readme) funktioniert diese Anweisung stattdessen: 
 # """ Explain your answer in german based ONLY on the following context:{context}
 #    Question: {question}"""
-template = """ Begründe Deine Antwort NUR anhand des folgenden Zusammenhangs:{context}
+template = """ Stelle in Deiner Antwort die Position NUR anhand des folgenden Kontexts dar:{context}
     Frage: {question}"""
 
 
