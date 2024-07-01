@@ -1,4 +1,14 @@
-# RAG
+# RAG - Wozu dient dieser Code?
+Dieses Setup dient dazu ein loakles Retrieval Augmented Generation (RAG) System mit einer lokalen LLM zu verknüpfen. Die Datei Dokumentenverschlinger.py ermöglicht es beliebig viel Text aus PDFs auszulesen, zu embedden und in einer Vektordatenbank zu speichern. Ausführen mit:
+``` python3.11 Dokumentenverschlinger.py```
+
+Anschließend wird die Datenbank von FragMich.py geladen und beantwortet einen User*innen-Input anhand der Datenbank. Dies geschieht mit Ein- und Ausgabe im Terminal. Ausführen mit:
+``` python3.11 FragMich.py ``` 
+
+Der Code ist ausführlichst auskommentiert, da er mir selbst beim Erlernen und Verstehen des Systems helfen soll. Anderen ebf. unerfahrenen Programmierenden kann er evtl. dabei helfen das Framework schneller zu erfassen.
+--
+## Erste Schritte bei der eigenen Umsetzung:
+#### Installieren von Ollama ("Docker für LLMs")
 Damit das ganze funktioniert, muss erst ollama mit llama3 für die antworten und nomic-embed-text fürs embedding installiert werden. Das geht via:
 
 ```sudo apt update```
@@ -9,7 +19,7 @@ Damit das ganze funktioniert, muss erst ollama mit llama3 für die antworten und
 
 ```ollama pull nomic-embed-text```
 
-
+#### Starten einer virtuellen Umgebung
 Anschließend virtuelle python3.11 Umgebung (3.12 funktioniert nicht mit allem)
 ```python3.11 -m venv venv```
 
@@ -17,6 +27,7 @@ im entsprechenden Verzeichnis aktivieren via
 
 ```source venv/bin/activate```
 
+#### Installieren notwendiger Bibliotheken
 Und daraufhin folgende benötigte Bibliotheken installieren:
 
 ```pip3 install langchain_community```
@@ -27,7 +38,7 @@ Und daraufhin folgende benötigte Bibliotheken installieren:
 ```pip install chromadb```
 ```pip install langchain-text-splitters```
 
-
+#### Erstellung der Datenbank und Query an die Datenbank
 Abschließend erst mit 
 ```python3.11 Dokumentenverschlinger.py ```
 die ganze Datenbank auslesen, indexieren und speichern. 
@@ -37,7 +48,7 @@ Dann mit
 die Datenbank laden und das System antwortet nur basierend auf der Datengrundlage.
 
 
-
+--
 ## Installieren eines Deutschen Sprachmodells für bessere Ergebnisse 
 
 Diese Schritte sind nur notwendig, wenn das gewünschte Sprachmodell noch nicht in
