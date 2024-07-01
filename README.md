@@ -6,6 +6,7 @@ Anschließend wird die Datenbank von FragMich.py geladen und beantwortet einen U
 ``` python3.11 FragMich.py ``` 
 
 Der Code ist ausführlichst auskommentiert, da er mir selbst beim Erlernen und Verstehen des Systems helfen soll. Anderen ebf. unerfahrenen Programmierenden kann er evtl. dabei helfen das Framework schneller zu erfassen.
+
 --
 ## Erste Schritte bei der eigenen Umsetzung:
 #### Installieren von Ollama ("Docker für LLMs")
