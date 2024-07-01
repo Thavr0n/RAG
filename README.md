@@ -1,8 +1,10 @@
 # RAG - Wozu dient dieser Code?
 Dieses Setup dient dazu ein loakles Retrieval Augmented Generation (RAG) System mit einer lokalen LLM zu verknüpfen. Die Datei Dokumentenverschlinger.py ermöglicht es beliebig viel Text aus PDFs auszulesen, zu embedden und in einer Vektordatenbank zu speichern. Ausführen mit:
+
 ``` python3.11 Dokumentenverschlinger.py```
 
 Anschließend wird die Datenbank von FragMich.py geladen und beantwortet einen User*innen-Input anhand der Datenbank. Dies geschieht mit Ein- und Ausgabe im Terminal. Ausführen mit:
+
 ``` python3.11 FragMich.py ``` 
 
 Der Code ist ausführlichst auskommentiert, da er mir selbst beim Erlernen und Verstehen des Systems helfen soll. Anderen ebf. unerfahrenen Programmierenden kann er evtl. dabei helfen das Framework schneller zu erfassen.
