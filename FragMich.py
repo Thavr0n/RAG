@@ -9,6 +9,7 @@ from langchain.retrievers.multi_query import MultiQueryRetriever
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import OllamaEmbeddings
 
+## gibt den Pfad zu unserer Vektordatenbank an
 persist_directory = "/home/ssaman/RAG/RAG/Datenbank"
 
 ## ermöglicht es auf die vektordatenbank, die durch Dokumentenverschlinger.py angelegt wurde zuzugreifen

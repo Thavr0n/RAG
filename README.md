@@ -72,8 +72,8 @@ Nachdem die obigen Voraussetzungen überprüft sind:
 
 4. Eine neue Modelfile erstellen, die als Quelle den eben heruntergeladenen Ordner angibt:
 ``` ## Modelfile ``` 
-``` FROM /home/ssaman/Llama3-DiscoLeo-Instruct-8B-v0.1"``` 
-``` PARAMETER stop "<|im_start|>"``` 
+``` FROM /home/ssaman/Llama3-DiscoLeo-Instruct-8B-v0.1"```
+ ``` PARAMETER stop "<|im_start|>"``` 
 ``` PARAMETER stop "<|im_end|>"``` 
 ``` TEMPLATE """``` 
 ``` <|im_start|>system``` 
@@ -86,3 +86,7 @@ Nachdem die obigen Voraussetzungen überprüft sind:
 5. Den Ordnerpfad in dem Safetensors/GGUF und Daten und Modelfile liegen öffnen und mit Ollama eine neue LLM daraus erstellen via:
 ```ollama create -q Q4_K_M GermanLlama3```
 Weitere Quantisierungsmethoden ("Q4_K_M") hier: https://github.com/ollama/ollama/blob/main/docs/import.md#importing-pytorch--safetensors 
+
+
+## Installieren von Pipelines um das System mit OpenWebUI zu verbinden
+https://github.com/open-webui/pipelines 
