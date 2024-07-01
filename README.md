@@ -48,16 +48,23 @@ die Datenbank laden und das System antwortet nur basierend auf der Datengrundlag
 
 
 
-## Zum installieren eines Deutschen Sprachmodells für bessere Ergebnisse via Ollama:
+## Zum installieren eines Deutschen Sprachmodells für bessere Ergebnisse 
 
+Diese Schritte sind nur notwendig, wenn das gewünschte Sprachmodell noch nicht in
+der ollama library verfügbar ist und nur als safetensor bzw. gguf modell existiert:
+Ebenfalls sind sie nur möglich, wenn das basierende Sprachmodell auf einer dieser drei
+Architekturen beruht (vgl. https://github.com/ollama/ollama/blob/main/docs/import.md#importing-pytorch--safetensors )
+- LlamaForCausalLM
+- MistralForCausalLM
+- GemmaForCausalLM 
+
+Ob das so ist kann in der Repo des Modells unter config.json eingesehen werden. 
 1. git lfs installieren, um große Daten laden zu können (falls noch nicht geschehen)
 2. git clone https://huggingface.co/DiscoResearch/Llama3-DiscoLeo-Instruct-8B-v0.1
-3. In den Ordner des heruntergeladenen Models gehen und via 
-```docker run --rm -v .:./model ollama/quantize -q q4_K_M /model```
-die daten in eine GGUF Datei umwandeln
-4. Eine neue Modelfile erstellen, die auf dem llama3 Model basiert:
-``` Modelfile ``` 
-``` FROM "./Llama3-DiscoLeo-Instruct-8B-v0.1.Q4_K_M.gguf"``` 
+
+4. Eine neue Modelfile erstellen, die als Quelle den eben heruntergeladenen Ordner angibt:
+``` ## Modelfile ``` 
+``` FROM /home/ssaman/Llama3-DiscoLeo-Instruct-8B-v0.1"``` 
 ``` PARAMETER stop "<|im_start|>"``` 
 ``` PARAMETER stop "<|im_end|>"``` 
 ``` TEMPLATE """``` 
@@ -68,4 +75,6 @@ die daten in eine GGUF Datei umwandeln
 ``` <|im_start|>assistant``` 
 ``` """``` 
 
-5. Die GGUF Datei in eine Ollama Datei um
+5. Innerhalb von Ollama eine neue LLM daraus erstellen via 
+```ollama create -q Q4_K_M mymodel```
+Weitere Quantisierungsmethoden ("Q4_K_M") hier: https://github.com/ollama/ollama/blob/main/docs/import.md#importing-pytorch--safetensors 
