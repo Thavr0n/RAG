@@ -30,12 +30,6 @@ Und anschließend folgende benötigte Bibliotheken installieren:
 ```pip install chromadb```
 ```pip install langchain-text-splitters```
 
---- 
-##### unsicher ob benötigt:
-```pip install psutil```
-
-```sudo apt-get install poppler-utils```
---- 
 
 
 Abschließend erst mit 
