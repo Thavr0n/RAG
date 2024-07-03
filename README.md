@@ -100,3 +100,17 @@ Weitere Quantisierungsmethoden ("Q4_K_M") hier: https://github.com/ollama/ollama
 
 ## Installieren von Pipelines um das System mit OpenWebUI zu verbinden
 https://github.com/open-webui/pipelines 
+
+
+1. Installieren von OpenWebUI:
+```docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main```
+
+2. Installieren von Pipelines mit erweiterten Dependencies:
+```docker run -d -p 9099:9099 --add-host=host.docker.internal:host-gateway -e PIPELINES_URLS="https://github.com/open-webui/pipelines/blob/main/examples/filters/detoxify_filter_pipeline.py" -v pipelines:/app/pipelines --name pipelines --restart always ghcr.io/open-webui/pipelines:main```
+
+3. Über Einstellungen --> Admin Panel --> Connections die Verbindung zu Pipelines und Ollama überprüfen mit einem Klick auf die zwei Pfeile rechts neben den Eingabefeldern. 
+Open AI API: ```http://localhost:9099``` API KEY: ```0p3n-w3bu!```
+Ollama API: ```http://127.0.0.1:11434```
+
+---- falls die Verbindung mit Pipelines nicht funktioniert. Docker container von OpenWebUI stoppen, löschen und neu starten mit 
+```docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main``` 
